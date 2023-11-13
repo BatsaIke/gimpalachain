@@ -18,6 +18,12 @@ const txtFilename = "data";
 const txtPath = `./${txtFilename}.txt`;
 const VECTOR_STORE_PATH = `${txtFilename}.index`;
 
+
+app.get('/', (req, res) => {
+  res.send('Hello, Gimpa Assist!');
+});
+
+
 app.post('/ask', async (req, res) => {
   const { question } = req.body;
 
