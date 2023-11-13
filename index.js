@@ -5,7 +5,7 @@ import { HNSWLib } from 'langchain/vectorstores';
 import { OpenAIEmbeddings } from 'langchain/embeddings';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import * as fs from 'fs';
-import * as path from 'path';  // Import the 'path' module
+import * as path from 'path';
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -16,8 +16,16 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 const txtFilename = "data";
-const txtPath = path.join(process.cwd(), `${txtFilename}.txt`);  // Use an absolute path
-const VECTOR_STORE_PATH = `${txtFilename}.index`;
+
+// Use import.meta.url to get the current module's URL
+const currentModuleUrl = new URL(import.meta.url);
+
+// Use path.dirname to get the directory path
+const moduleDirectory = path.dirname(currentModuleUrl.pathname);
+
+// Combine the directory path with the filename
+const txtPath = path.join(moduleDirectory, `${txtFilename}.txt`);
+const VECTOR_STORE_PATH = path.join(moduleDirectory, `${txtFilename}.index`);
 
 app.get('/', (req, res) => {
   res.send('Hello, Gimpa Assist!');
@@ -55,7 +63,7 @@ app.post('/ask', async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error', message: error.message });
   }
-}); 
+});
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
