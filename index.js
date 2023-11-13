@@ -5,6 +5,7 @@ import { HNSWLib } from 'langchain/vectorstores';
 import { OpenAIEmbeddings } from 'langchain/embeddings';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import * as fs from 'fs';
+import * as path from 'path';  // Import the 'path' module
 import * as dotenv from 'dotenv';
 
 dotenv.config();
@@ -15,14 +16,12 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 
 const txtFilename = "data";
-const txtPath = `./${txtFilename}.txt`;
+const txtPath = path.join(process.cwd(), `${txtFilename}.txt`);  // Use an absolute path
 const VECTOR_STORE_PATH = `${txtFilename}.index`;
-
 
 app.get('/', (req, res) => {
   res.send('Hello, Gimpa Assist!');
 });
-
 
 app.post('/ask', async (req, res) => {
   const { question } = req.body;
