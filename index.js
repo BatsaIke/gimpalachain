@@ -5,8 +5,10 @@ import { HNSWLib } from 'langchain/vectorstores';
 import { OpenAIEmbeddings } from 'langchain/embeddings';
 import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import * as fs from 'fs';
-import * as path from 'path';
 import * as dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 dotenv.config();
 
@@ -15,17 +17,12 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const txtFilename = "data";
-
-// Use import.meta.url to get the current module's URL
-const currentModuleUrl = new URL(import.meta.url);
-
-// Use path.dirname to get the directory path
-const moduleDirectory = path.dirname(currentModuleUrl.pathname);
-
-// Combine the directory path with the filename
-const txtPath = path.join(moduleDirectory, `${txtFilename}.txt`);
-const VECTOR_STORE_PATH = path.join(moduleDirectory, `${txtFilename}.index`);
+const txtPath = path.join(__dirname, `${txtFilename}.txt`);
+const VECTOR_STORE_PATH = path.join(__dirname, `${txtFilename}.index`);
 
 app.get('/', (req, res) => {
   res.send('Hello, Gimpa Assist!');
