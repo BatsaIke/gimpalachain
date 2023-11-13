@@ -48,6 +48,7 @@ app.post('/ask', async (req, res) => {
     res.json({ response: result });
   } catch (error) {
     console.error(error);
+    res.send(error.message);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
