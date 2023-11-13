@@ -16,7 +16,6 @@ app.use(express.json());
 
 const txtFilename = "data";
 const txtPath = `./${txtFilename}.txt`;
-
 const VECTOR_STORE_PATH = `${txtFilename}.index`;
 
 app.post('/ask', async (req, res) => {
@@ -33,8 +32,7 @@ app.post('/ask', async (req, res) => {
     console.log('Vector Exists..');
     vectorStore = await HNSWLib.load(VECTOR_STORE_PATH, new OpenAIEmbeddings());
   } else {
-   
-    const text = fs.readFileSync(txtPath, 'utf8');
+    const text = fs.readFileSync(txtPath, 'utf8').replace(/\r/g, '');
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000 });
     const docs = await textSplitter.createDocuments([text]);
     vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings());
@@ -50,7 +48,6 @@ app.post('/ask', async (req, res) => {
     res.json({ response: result });
   } catch (error) {
     console.error(error);
-    res.send(error.message);
     res.status(500).json({ error: 'Internal Server Error' });
   }
 });
@@ -58,4 +55,3 @@ app.post('/ask', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
- 
