@@ -7,6 +7,8 @@ import { RecursiveCharacterTextSplitter } from 'langchain/text_splitter';
 import * as fs from 'fs';
 import * as dotenv from 'dotenv';
 import path from 'path';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 dotenv.config();
 
@@ -15,9 +17,12 @@ const port = process.env.PORT || 3000;
 
 app.use(express.json());
 
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
 const txtFilename = "data";
-const txtPath = path.resolve(__dirname, `${txtFilename}.txt`);
-const VECTOR_STORE_PATH = path.resolve(__dirname, `${txtFilename}.index`);
+const txtPath = path.join(__dirname, `${txtFilename}.txt`);
+const VECTOR_STORE_PATH = path.join(__dirname, `${txtFilename}.index`);
 
 app.get('/', (req, res) => {
   res.send('Hello, Gimpa Assist!');
