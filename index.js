@@ -55,7 +55,7 @@ app.post('/ask', async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Internal Server Error', message: error.message });
   }
-});
+}); 
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
