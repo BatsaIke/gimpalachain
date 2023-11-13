@@ -18,6 +18,8 @@ const txtFilename = "data";
 const txtPath = `./${txtFilename}.txt`;
 const VECTOR_STORE_PATH = `${txtFilename}.index`;
 
+console.log('__dirname:', __dirname); // Log the current working directory
+
 app.post('/ask', async (req, res) => {
   const { question } = req.body;
 
@@ -55,4 +57,3 @@ app.post('/ask', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
- 
