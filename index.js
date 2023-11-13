@@ -17,7 +17,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
-app.use(cors())
+app.use(cors());
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -25,6 +25,10 @@ const __dirname = dirname(__filename);
 const txtFilename = "data";
 const txtPath = path.join(__dirname, `${txtFilename}.txt`);
 const VECTOR_STORE_PATH = path.join(__dirname, `${txtFilename}.index`);
+
+// Use your ChatGPT API key
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+const model = new OpenAI({ apiKey: OPENAI_API_KEY, model: "text-davinci-002" });
 
 app.get('/', (req, res) => {
   res.send('Hello, Gimpa Assist!');
@@ -37,7 +41,6 @@ app.post('/ask', async (req, res) => {
     return res.status(400).json({ error: 'Question is required in the request body.' });
   }
 
-  const model = new OpenAI({});
   let vectorStore;
 
   if (fs.existsSync(VECTOR_STORE_PATH)) {
@@ -59,10 +62,10 @@ app.post('/ask', async (req, res) => {
     });
     res.json({ response: result });
   } catch (error) {
-    console.error(error);
+    console.error(error); 
     res.status(500).json({ error: 'Internal Server Error', message: error.message });
   }
-});
+});  
 
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
