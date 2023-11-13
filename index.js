@@ -16,6 +16,7 @@ app.use(express.json());
 
 const txtFilename = "data";
 const txtPath = `./${txtFilename}.txt`;
+
 const VECTOR_STORE_PATH = `${txtFilename}.index`;
 
 app.post('/ask', async (req, res) => {
@@ -32,7 +33,8 @@ app.post('/ask', async (req, res) => {
     console.log('Vector Exists..');
     vectorStore = await HNSWLib.load(VECTOR_STORE_PATH, new OpenAIEmbeddings());
   } else {
-    const text = fs.readFileSync(txtPath, 'utf8').replace(/\r/g, ''); // Use replace with a regular expression
+   
+    const text = fs.readFileSync(txtPath, 'utf8');
     const textSplitter = new RecursiveCharacterTextSplitter({ chunkSize: 1000 });
     const docs = await textSplitter.createDocuments([text]);
     vectorStore = await HNSWLib.fromDocuments(docs, new OpenAIEmbeddings());
