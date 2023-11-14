@@ -1,6 +1,6 @@
 The Ghana Institute of Management and Public Administration (GIMPA) was established in 1961 as a joint Ghana Government/United Nations (UN) special fund. 
 
-Batsa is a student of gimpa sot studying computer science.
+Isaac Batsa is a student of gimpa sot studying computer science.
 
 About Us: 
 The Ghana Institute of Management and Public Administration (GIMPA) was established in 1961 as a joint Ghana Government /United Nations (UN) special fund project. Originally named the Institute of Public Administration, it was set up as one of the key strategic institutions to develop the public administrative system, to provide civil servants with administrative and professional competence, and to plan and administer national, regional and local services.
@@ -22,8 +22,8 @@ Here is how to apply:
 •	Applicants who have trouble applying online should download the application form and apply manually. Completed application forms with required supporting documents should be sent to admissions@gimpa.edu.gh. The subject of the email should contain the programme you are applying for.
 Please call the admissions office on 0543560771 should you require any assistance.
 Where can I get the application forms?
-1.	You can apply electronically; Apply Now.
-2.	You can also apply manually by downloading application forms Here
+answer: 1.	You can apply electronically; Apply Now.
+answer: 2.	You can also apply manually by downloading application forms Here
 How much is the application fee?
 What number can I call for enquiries?
 Want to Study at GIMPA?
@@ -542,4 +542,91 @@ Dear All,
 I hope this email finds you well.
 The last face of the past registration will start Monday,30th October 2023. Please ensure you have no outstanding balance at all so you can register. If you are met with any challenges ,kindly bring to the attention of the various academic registrars of your faculty. 
 
+Below is the wireless networks course outline for 2023 level 400 computer science course and information Technology course students.
+Time:			EVENING
+Period:		September – January 2023
+Instructor: 	   	Mr. Emmanuel Antwi-Boasiako
+Office Location: 	Block C/Room 5, GIMPA Campus	
+Office Hours: 	Wednesdays (2:00-4:00pm) and Thursdays (5:00-6:00pm)      	 
+Phone: 		0205655223
+E-mail: 		abeantwi@gimpa.edu.gh
+
+COURSE DESCRIPTION
+Wireless technologies such as 4G (LTE), 3G (UMTS), and 2G (GSM), Wi-Fi (IEEE 802.11), Bluetooth, NFC and others provide opportunities for mobile communication. This course introduces the fundamental as well as technical issues and state-of-the-art techniques involved in the operation and management of Wireless networks.  
+COURSE OBJECTIVES
+•	The main objective of this course is to provide students with the opportunity to learn the engineering principles and system evaluation methods used in the design of Wireless Networks. 
+LEARNING OUTCOMES
+At the end of the course, students should be able to:
+•	Develop a good understanding of different types of wireless networks, including infrastructure-based wireless local area networks, cell, ad hoc networks, mesh networks, and sensor networks. They should also understand the distinguishing features of these networks, and also differences between wireless and wired networks. 
+•	Develop a good understanding of wireless communications, Cellular wireless networks, 2G, 2.5G, 3G and 4G cellular networks. 
+•	 Have an understanding of the latest developments in wireless network protocols and technologies. 
+•	Apply basic analytical skills to the analysis, evaluation and design of wireless networks at the lower layers.
+•	Have an understanding of the technical issues and state-of-the-art techniques in the operation and management of mobile communications networks. 
+•	Students should be able to setup and configure a wireless local area networks 
+•	Demonstrate professional skills such as teamwork, punctuality and efficient communication of technical concepts in both written and oral forms.
+PREREQUISITE
+Data Communication and Networking
+
+MEASUREMENT OF LEARNING OUTCOMES
+Final written examination               			 60%
+Interim Assessment              				 25%
+Attendance/Assignments/Presentation	          	15%
+
+REQUIRED TEXT
+•	Wireless Communications and Networks William Stallings, 2nd edition 20025, Printice Hall, 2005, 600 pp. ISBN 0-13-191835-4
+•	Wireless Networking Complete, The Morgan Kaufmann Series in Networking
+Others
+•	Kumar, Danjunath and Jury, Wireless Networking, Morgan Kaufmann 2008, ISBN 978-0-12-374254
+•	Principles of Wireless Networks, Kaveh Pahlavan, Prashant Krishnamurthy,Prentice Hall, 2002, ISBN: 0130930032  
+•	Garg, Wireless Communications and Networks, Morgan Kaufmann 2007, ISBN 978-0-12-373580-5.
+•	Schwartz, Mobile Wireless Communications, Cambridge University Press, 2005, ISBN 0-521-84347
+•	Lecture slides
+•	http://williamstallings.com/Wireless1e.html
+
+RESOURCES
+Any suitable Wireless Network Simulator
+ 
+AVAILABILITY & RESTRICTIONS
+The course is required by all Bachelor of Information and Communication Technology students.
+
+METHODOLOGY
+This course will be organized with lectures/discussions and Group presentations and lab sessions. 
+COUSE OUTLINE.
+SCHEDULE OF SESSIONS AND TOPICS
+SESSION	THEME	REMARKS
+Weeks 1& 2	•	Overview of wireless communications  and Cellular wireless communications 	
+Week 3	•	2G, 2.5G, 3G,4G and 5G cellular networks  	
+Week 4	•	Wireless local area networks (Wi-Fi)   	Presentation 1
+Weeks 5	•	Wireless personal area networks (Bluetooth, UWB, ZigBee)  	
+Weeks 6
+	•	MID-SEMESTER EXAMS	
+Weeks 7
+	Mobile ad hoc networks (MANET)   	
+Week 8	•	Wireless sensor networks  	Presentation 2
+Week 9	•	Wireless wireline interworking, Mobile IP  	
+Week 10	•	Mobility management and radio resource management  	
+Week 11	•	Traffic models, mobility models and Multiple access techniques     	
+Week 12	•	Simulations of wireless networks 	Lab 1
+Week 13	•	Revision	Lab 2
+
+ACADEMIC DISHONESTY
+Cheating is not acceptable and may lead to no credit. Cheating includes the following:
+1. Taking concealed notes into an examination
+2. Copying from other students
+3. Making use of any material without academically proper acknowledgment of its source
+4. Having another party write work for you to submit
+5. Anything that violates GIMPA standards.
+
+LATE SUBMISSIONS
+Late submissions will not be tolerated.
+
+CAUTION
+Attendance will be checked and refusal to attend lectures for a number of times will disallow culprit students from sitting the exams.
+
+
+
+
+
+
+   
 
